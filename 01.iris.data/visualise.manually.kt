@@ -37,7 +37,8 @@ data class Measurment(val a: Double,
 
 
 fun main(args: Array<String>) {
-    val lines = File("C:\\Users\\Daniil_Vodopian\\Documents\\DataScience\\17projects\\01.iris.data\\iris.data.txt").readLines()
+    val file = File("01.iris.data/iris.data.txt")
+    val lines = file.readLines()
     val measurments = lines.filterNot { it.isEmpty() }.map { Measurment.parse(it) }
 
     measurments.forEach { println(it) }
